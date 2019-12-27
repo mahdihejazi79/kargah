@@ -63,14 +63,13 @@ void sortFood()
 			struct food temp;
 			temp=f[j];
 			f[j]=f[k];
-			f[k]=temp;
 		}
 	}
 	
 	ptf=fopen("foods.txt","w");
 	
 	for(int j=0;j<i-1;j++)
-	fprintf(ptf,"%s %d\n",f[j].foodName,f[j].foodPrice);
+	fprintf(ptf,"%s %d\n",f[j].foodName,f[i].foodPrice);
 	
 	fclose(ptf);
 }
